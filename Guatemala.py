@@ -6,6 +6,7 @@ ventana.geometry("700x400")
 ventana.title("Guatemala Monitoreo")
 scrollbar = Scrollbar(ventana)
 scrollbar.grid(padx=5, pady=5,  row=0, column = 2 )
+
 # comprobar si existe un archivo
 ruta_icono = os.path.abspath('./imagenes/chart.ico')
 #comprueba si existe la ruta del icono para cargarlo
@@ -26,7 +27,7 @@ def read(conn):
         c+=1
         #label.grid(row=c, column=0, sticky = NW)
         #label.config(fg="black",  font=("Arial", 12), padx=10, pady=20, bd=2 , relief=SOLID) 
-    listbox.config(width=100, height=50)
+    listbox.config(width=150, height=50)
     listbox.grid(padx=5, pady=5, row=0, column = 1)
     scrollbar.config(command=listbox.yview)
 conn = pyodbc.connect(
